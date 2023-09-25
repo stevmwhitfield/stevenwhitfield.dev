@@ -14,3 +14,4 @@ A single-page website to showcase a little about myself.
 ## To-Do
 
 - Add dynamic routes for projects
+- Add toggle for dark/light theme
