@@ -20,6 +20,7 @@ body {
 body {
   background: var(--clr-foreground);
   color: var(--clr-background);
+  font-size: 1.125rem;
 }
 
 h1 {
