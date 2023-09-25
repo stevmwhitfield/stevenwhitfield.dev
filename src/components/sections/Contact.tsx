@@ -8,7 +8,7 @@ const Contact = () => {
       <p className="mb-8">{"I'll"} do my best to reply within 24 hours.</p>
       <Link
         href={"mailto:stevmwhitfield@gmail.com"}
-        className="flex gap-2 items-center py-3 px-6 bg-green rounded-full text-background hover:no-underline"
+        className="flex gap-2 items-center py-3 px-6 bg-greenAlt dark:bg-green rounded-full text-text dark:text-background hover:no-underline"
       >
         <span>{"Say Hello"}</span>
         <ChatBubbleLeftEllipsisIcon className="w-6 h-6" />

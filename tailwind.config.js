@@ -12,6 +12,7 @@ module.exports = {
         foreground: "#e3e3e3",
         red: "#ff8585",
         green: "#8fff85",
+        greenAlt: "#56d14b",
         blue: "#ade4ff",
         text: "#dbdbdb",
         textDark: "#121212"

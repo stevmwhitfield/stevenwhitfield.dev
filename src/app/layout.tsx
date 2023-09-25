@@ -22,7 +22,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${ubuntu.className} flex flex-col max-w-5xl mx-auto`}>
-        {/* <header className="fixed w-full bottom-0 left-0 z-50 border-t border-text bg-foreground md:relative md:max-w-3xl md:mx-auto md:border-0 dark:bg-background dark:border-[#363636]"> */}
         <header className="fixed w-full bottom-0 left-0 z-50 border-t border-text bg-foreground md:bottom-auto md:border-0 dark:bg-background dark:border-[#363636]">
           <nav className="flex h-20 justify-between md:max-w-3xl md:mx-auto">
             <NavLink href={"/"} label={"Home"}>
