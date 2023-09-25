@@ -35,10 +35,12 @@ a:hover {
 @media (prefers-color-scheme: dark) {
   body {
     background: var(--clr-background);
-    color: var(--clr-foreground);
-  }
-
-  h1 {
     color: var(--clr-text);
+  }
+}
+
+@media (min-width: 80rem) {
+  body {
+    font-size: 1.25rem;
   }
 }
