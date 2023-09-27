@@ -1,9 +1,11 @@
-import Skill from "../Skill";
+import Skill from "@/components/advanced/Skill";
+import Section from "@/components/basic/Section";
+import SectionHeader from "@/components/basic/SectionHeader";
 
 const Skills = () => {
   return (
-    <section id="skills" className="container mx-auto flex flex-col items-center text-center">
-      <h2 className="font-medium text-3xl mb-6 xl:text-4xl">Current Tools</h2>
+    <Section id={"Skills"}>
+      <SectionHeader text={"Current Tools"} />
       <div className="grid grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-3 md:grid-cols-4">
         <Skill icon={"devicon-html5-plain colored"} label={"HTML5"} />
         <Skill icon={"devicon-css3-plain colored"} label={"CSS3"} />
@@ -22,7 +24,7 @@ const Skills = () => {
         <Skill icon={"devicon-npm-original-wordmark colored"} label={"NPM"} />
         <Skill icon={"devicon-eslint-plain colored"} label={"ESLint"} />
       </div>
-    </section>
+    </Section>
   );
 };
 

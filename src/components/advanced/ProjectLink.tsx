@@ -1,8 +1,8 @@
-import { TProjectLink } from "@/types";
+import { IProjectLink } from "@/types";
 
 import Link from "next/link";
 
-const Project = ({ title, tags, href }: TProjectLink) => {
+const Project = ({ title, tags, href }: IProjectLink) => {
   if (href === undefined) {
     return (
       <div className="flex flex-col text-start border-b-2 border-transparent">

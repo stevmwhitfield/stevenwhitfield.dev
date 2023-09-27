@@ -1,13 +1,18 @@
+import Paragraph from "@/components/basic/Paragraph";
+import Section from "@/components/basic/Section";
+import SectionHeader from "@/components/basic/SectionHeader";
+
 import Link from "next/link";
 
 const Bio = () => {
   return (
-    <section id="bio" className="container mx-auto flex flex-col items-center text-center">
-      <h2 className="font-medium text-3xl mb-4 xl:text-4xl">{"Hi, I'm Steven."}</h2>
-      <p className="mb-6">
-        A recent computer science graduate from Florida Polytechnic University - currently seeking opportunities to join
-        a team and contribute my technical expertise to innovative projects that solve real-world problems.
-      </p>
+    <Section id={"bio"}>
+      <SectionHeader text={"Hi, I'm Steven."} />
+      <Paragraph
+        text={
+          "A recent computer science graduate from Florida Polytechnic University - currently seeking opportunities to join a team and contribute my technical expertise to innovative projects that solve real-world problems."
+        }
+      />
       <div className="flex gap-x-4">
         <Link
           href={"https://www.linkedin.com/in/stevenmwhitfield/"}
@@ -27,7 +32,7 @@ const Bio = () => {
           <span>GitHub</span>
         </Link>
       </div>
-    </section>
+    </Section>
   );
 };
 
