@@ -2,11 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --clr-background: #242424;
-  --clr-foreground: #e3e3e3;
-  --clr-text: #dbdbdb;
-  --clr-text-dark: #121212;
+@layer base {
+  body[data-theme="light"] {
+    --clr-background: 219 219 219; /* #e3e3e3 */
+    --clr-text: 36 36 36; /* #242424 */
+    --clr-text-alt: 240 240 240; /* #f0f0f0 */
+    --clr-primary: 67 163 58; /* #43a33a */
+    --clr-border: 202 202 202; /* #d6d6d6 */
+  }
+
+  body[data-theme="dark"] {
+    --clr-background: 36 36 36; /* #242424 */
+    --clr-text: 219 219 219; /* #e3e3e3 */
+    --clr-text-alt: 18 18 18; /* #121212 */
+    --clr-primary: 143 255 133; /* #8fff85 */
+    --clr-border: 62 62 62; /* #3e3e3e */
+  }
 }
 
 html,
@@ -18,25 +29,14 @@ body {
 }
 
 body {
-  background: var(--clr-foreground);
-  color: var(--clr-background);
+  background: rgb(var(--clr-background));
+  color: rgb(var(--clr-text));
   font-size: 1.125rem;
-}
-
-h1 {
-  color: var(--clr-text-dark);
 }
 
 a:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--clr-background);
-    color: var(--clr-text);
-  }
 }
 
 @media (min-width: 80rem) {

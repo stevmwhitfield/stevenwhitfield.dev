@@ -2,7 +2,7 @@
 
 module.exports = {
   root: true,
-  plugins: ["react", "prettier", "@typescript-eslint", "import"],
+  plugins: ["react", "prettier", "@typescript-eslint", "import", "testing-library"],
   extends: [
     "eslint:recommended",
     "next/core-web-vitals",
@@ -95,6 +95,10 @@ module.exports = {
         "@typescript-eslint/prefer-optional-chain": "error",
         "@typescript-eslint/restrict-template-expressions": "off"
       }
+    },
+    {
+      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      extends: ["plugin:testing-library/react"]
     }
   ]
 };

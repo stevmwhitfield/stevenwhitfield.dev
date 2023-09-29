@@ -3,12 +3,11 @@ import { IButtonLink } from "@/types";
 import Link from "next/link";
 
 const ButtonLink = ({ variant = "solid", href, text, icon }: IButtonLink) => {
-  const baseStyles =
-    "flex gap-2 items-center py-3 px-6  rounded-full text-text dark:text-background hover:no-underline";
+  const baseStyles = "flex gap-2 items-center py-3 px-6 rounded-full hover:no-underline";
 
-  const solidStyles = "bg-greenAlt dark:bg-green";
+  const solidStyles = "bg-primary text-text-alt";
 
-  const outlineStyles = "border-2 border-greenAlt text-background dark:border-green dark:text-foreground";
+  const outlineStyles = "border-2 border-primary text-text";
 
   let buttonStyles = "";
 

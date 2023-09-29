@@ -18,11 +18,25 @@ export const metadata = {
   description: "A recent graduate and full stack software engineer. Open to work opportunities."
 };
 
+const setInitialTheme = `
+  const getUserThemePreference = () => {
+    const localTheme = window.localStorage.getItem("theme");
+    if (localTheme !== "undefined" && localTheme !== null) {
+      return localTheme;
+    }
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  };
+
+  document.body.dataset.theme = getUserThemePreference();
+`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${ubuntu.className} flex flex-col max-w-5xl mx-auto`}>
-        <header className="fixed w-full bottom-0 left-0 z-50 border-t border-text bg-foreground md:bottom-auto md:border-0 dark:bg-background dark:border-[#363636]">
+        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+        <header className="fixed w-full bottom-0 left-0 z-50 border-t border-border bg-background md:bottom-auto md:border-0">
           <nav className="flex h-20 justify-between md:max-w-3xl md:mx-auto">
             <NavLink href={"/"} text={"Home"} icon={<HomeIcon className="w-6 h-6 md:hidden" />} />
             <NavLink href={"#projects"} text={"Projects"} icon={<FolderIcon className="w-6 h-6 md:hidden" />} />

@@ -5,7 +5,7 @@ import Link from "next/link";
 const Project = ({ title, tags, href }: IProjectLink) => {
   if (href === undefined) {
     return (
-      <div className="flex flex-col text-start border-b-2 border-transparent">
+      <div className="flex flex-col text-start">
         <p className="text-2xl mb-1 xl:text-3xl">{title}</p>
         <div className="flex gap-x-2 pb-1">
           <p className="text-sm overflow-hidden whitespace-nowrap overflow-ellipsis xl:text-base">{tags.join(" - ")}</p>
@@ -19,7 +19,7 @@ const Project = ({ title, tags, href }: IProjectLink) => {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="flex flex-col text-start border-b-2 border-transparent hover:no-underline hover:border-b-2 hover:border-text"
+      className="flex flex-col text-start hover:no-underline hover:text-primary"
     >
       <p className="text-2xl mb-1 xl:text-3xl">{title}</p>
       <div className="flex gap-x-2 pb-1">
