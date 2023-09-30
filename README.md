@@ -10,8 +10,3 @@ A single-page website to showcase a little about myself.
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [NPM](https://www.npmjs.com/)
-
-## To-Do
-
-- Add dynamic routes for projects
-- Add toggle for dark/light theme

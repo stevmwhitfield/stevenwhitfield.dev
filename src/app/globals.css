@@ -39,6 +39,35 @@ a:hover {
   text-underline-offset: 6px;
 }
 
+.markdown-content h2 {
+  /* font-weight: 500; */
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  /* font-size: 1.5rem;
+    line-height: 2rem; */
+  margin-top: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-content p {
+  margin-bottom: 1.125rem;
+}
+
+.markdown-content ul {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 0.5rem;
+  column-gap: 2rem;
+}
+
+.markdown-content li {
+  /* margin-bottom: 0.25rem; */
+}
+
+.markdown-content a:hover {
+  color: rgb(var(--clr-primary));
+}
+
 @media (min-width: 80rem) {
   body {
     font-size: 1.25rem;

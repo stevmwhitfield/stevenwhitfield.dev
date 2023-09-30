@@ -39,8 +39,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header className="fixed w-full bottom-0 left-0 z-50 border-t border-border bg-background md:bottom-auto md:border-0">
           <nav className="flex h-20 justify-between md:max-w-3xl md:mx-auto">
             <NavLink href={"/"} text={"Home"} icon={<HomeIcon className="w-6 h-6 md:hidden" />} />
-            <NavLink href={"#projects"} text={"Projects"} icon={<FolderIcon className="w-6 h-6 md:hidden" />} />
-            <NavLink href={"#contact"} text={"Contact"} icon={<PaperAirplaneIcon className="w-6 h-6 md:hidden" />} />
+            <NavLink href={"/#projects"} text={"Projects"} icon={<FolderIcon className="w-6 h-6 md:hidden" />} />
+            <NavLink href={"/#contact"} text={"Contact"} icon={<PaperAirplaneIcon className="w-6 h-6 md:hidden" />} />
           </nav>
         </header>
         <main className="container mx-auto px-6 flex-1 md:pt-20">{children}</main>

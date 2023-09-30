@@ -16,6 +16,8 @@ const Bio = () => {
       <div className="flex gap-x-4">
         <Link
           href={"https://www.linkedin.com/in/stevenmwhitfield/"}
+          target="_blank"
+          rel="noreferrer"
           className="flex items-center gap-2 hover:no-underline hover:text-primary [&>span]:hover:underline"
         >
           <i className="devicon-linkedin-plain text-2xl" />
