@@ -9,16 +9,16 @@ export const metadata = {
 const Home = () => {
   return (
     <>
-      <header className='flex flex-col items-center'>
+      <header className='flex flex-col sm:flex-row sm:items-center sm:gap-6'>
         <Image
           src={'/Steven_Whitfield.jpg'}
           alt={'A photo of Steven Whitfield'}
           title={'Steven Whitfield'}
-          width={96}
-          height={96}
+          width={72}
+          height={72}
           className='rounded-full'
         />
-        <div className='pt-3 text-center'>
+        <div className='pt-3 sm:pt-0'>
           <h1 className='text-4xl font-bold text-primary'>Steven Whitfield</h1>
           <h2 className='text-2xl text-subtext'>Software Engineer</h2>
         </div>
