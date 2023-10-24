@@ -9,9 +9,9 @@
     --clr-background: var(--ctp-latte-base-raw);
     --clr-text: var(--ctp-latte-text-raw);
     --clr-subtext: var(--ctp-latte-subtext0-raw);
-    --clr-primary: var(--ctp-latte-mauve-raw);
+    --clr-primary: var(--ctp-latte-teal-raw);
     --clr-accent: var(--ctp-latte-blue-raw);
-    --clr-border: var(--ctp-latte-lavender-raw);
+    --clr-border: var(--ctp-latte-subtext0-raw);
   }
 
   /* Catppuccin - Macchiato */
