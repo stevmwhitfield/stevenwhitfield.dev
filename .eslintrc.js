@@ -2,103 +2,103 @@
 
 module.exports = {
   root: true,
-  plugins: ["react", "prettier", "@typescript-eslint", "import", "testing-library"],
+  plugins: ['react', 'prettier', '@typescript-eslint', 'import', 'testing-library'],
   extends: [
-    "eslint:recommended",
-    "next/core-web-vitals",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    'eslint:recommended',
+    'next/core-web-vitals',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:import/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2021,
-    sourceType: "module"
+    sourceType: 'module',
   },
   env: {
     browser: true,
     es6: true,
-    node: true
+    node: true,
   },
   settings: {
-    "react": {
-      version: "detect"
+    'react': {
+      version: 'detect',
     },
-    "import/resolver": {
+    'import/resolver': {
       typescript: true,
-      node: true
-    }
+      node: true,
+    },
   },
   rules: {
-    "func-names": ["error", "as-needed"],
-    "no-shadow": "error",
-    "import/named": "error",
-    "import/no-cycle": "error",
-    "import/no-unresolved": "error",
-    "import/order": "warn",
-    "prettier/prettier": [
-      "warn",
+    'func-names': ['error', 'as-needed'],
+    'no-shadow': 'error',
+    'import/named': 'error',
+    'import/no-cycle': 'error',
+    'import/no-unresolved': 'error',
+    'import/order': 'warn',
+    'prettier/prettier': [
+      'warn',
       {
         bracketSameLine: false,
         bracketSpacing: true,
-        printWidth: 120,
+        printWidth: 100,
         semi: true,
-        singleQuote: false,
+        singleQuote: true,
         tabWidth: 2,
-        trailingComma: "none",
-        useTabs: false
-      }
+        trailingComma: 'es5',
+        useTabs: false,
+      },
     ],
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
   overrides: [
     {
-      files: ["**/*.ts?(x)"],
+      files: ['**/*.ts?(x)'],
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
           impliedStrict: true,
-          experimentalObjectRestSpread: true
+          experimentalObjectRestSpread: true,
         },
         allowImportExportEverywhere: true,
-        project: "tsconfig.json",
-        tsconfigRootDir: __dirname
+        project: 'tsconfig.json',
+        tsconfigRootDir: __dirname,
       },
-      plugins: ["@typescript-eslint"],
+      plugins: ['@typescript-eslint'],
       extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:import/typescript"
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/typescript',
       ],
       rules: {
-        "import/named": "off",
-        "import/no-unresolved": "off",
-        "import/order": [
-          "error",
+        'import/named': 'off',
+        'import/no-unresolved': 'off',
+        'import/order': [
+          'error',
           {
-            "groups": ["builtin", "internal", "external", "parent", "sibling", "index"],
-            "newlines-between": "always",
-            "alphabetize": {
-              order: "asc",
-              orderImportKind: "desc",
-              caseInsensitive: true
-            }
-          }
+            'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+            'newlines-between': 'always',
+            'alphabetize': {
+              order: 'asc',
+              orderImportKind: 'desc',
+              caseInsensitive: true,
+            },
+          },
         ],
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "no-shadow": "off",
-        "@typescript-eslint/no-shadow": "error",
-        "@typescript-eslint/prefer-optional-chain": "error",
-        "@typescript-eslint/restrict-template-expressions": "off"
-      }
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': 'error',
+        '@typescript-eslint/prefer-optional-chain': 'error',
+        '@typescript-eslint/restrict-template-expressions': 'off',
+      },
     },
     {
-      files: ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-      extends: ["plugin:testing-library/react"]
-    }
-  ]
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
 };

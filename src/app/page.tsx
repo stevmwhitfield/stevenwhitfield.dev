@@ -1,18 +1,38 @@
-import Bio from "@/components/advanced/sections/Bio";
-import Contact from "@/components/advanced/sections/Contact";
-import Hero from "@/components/advanced/sections/Hero";
-import Projects from "@/components/advanced/sections/Projects";
-import Skills from "@/components/advanced/sections/Skills";
+import Image from 'next/image';
+import Link from 'next/link';
+
+export const metadata = {
+  title: 'Steven Whitfield - Software Engineer',
+  description: 'Software engineer. Open to work opportunities.',
+};
 
 const Home = () => {
   return (
-    <div className="mt-20 flex flex-col gap-y-24 2xl:gap-y-36">
-      <Hero />
-      <Bio />
-      <Projects />
-      <Skills />
-      <Contact />
-    </div>
+    <>
+      <header className='flex flex-col sm:flex-row sm:items-center sm:gap-6'>
+        <Image
+          src={'/Steven_Whitfield.jpg'}
+          alt={'A photo of Steven Whitfield'}
+          title={'Steven Whitfield'}
+          width={72}
+          height={72}
+          className='rounded-full'
+        />
+        <div className='pt-3 sm:pt-0'>
+          <h1 className='text-4xl font-bold text-primary'>Steven Whitfield</h1>
+          <h2 className='text-2xl text-subtext'>Software Engineer</h2>
+        </div>
+      </header>
+      <section className='pt-12'>
+        <h3 className='text-3xl font-semibold'>Hello and welcome!</h3>
+        <p className='pt-6'>
+          {"I'm"} a recent C.S. grad from Florida Polytechnic University with a passion for the web
+          and tinkering with modern technologies. {"I'm"} currently open to work. Feel free to{' '}
+          <Link href={'/projects'}>browse my projects</Link> or reach out to{' '}
+          <Link href={'/contact'}>say hi</Link>.
+        </p>
+      </section>
+    </>
   );
 };
 

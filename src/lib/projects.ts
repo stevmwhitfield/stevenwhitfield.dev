@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { readFileSync } from "fs";
-import { readdir, readFile } from "fs/promises";
-import path from "path";
+import { readFileSync } from 'fs';
+import { readdir, readFile } from 'fs/promises';
+import path from 'path';
 
-import matter from "gray-matter";
-import { remark } from "remark";
-import html from "remark-html";
+import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
 
 interface IMatterData {
   title: string;
@@ -15,7 +15,7 @@ interface IMatterData {
   date: string;
 }
 
-const projectsDirectory = path.join(process.cwd(), "projects");
+const projectsDirectory = path.join(process.cwd(), 'projects');
 
 export const getAllProjectIds = async () => {
   const fileNames = await readdir(projectsDirectory);
@@ -23,8 +23,8 @@ export const getAllProjectIds = async () => {
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, "")
-      }
+        id: fileName.replace(/\.md$/, ''),
+      },
     };
   });
 };
@@ -33,10 +33,10 @@ export const getSortedProjectsData = async () => {
   const fileNames = await readdir(projectsDirectory);
 
   const allProjectsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
+    const id = fileName.replace(/\.md$/, '');
 
     const fullPath = path.join(projectsDirectory, fileName);
-    const fileContents = readFileSync(fullPath, "utf-8");
+    const fileContents = readFileSync(fullPath, 'utf-8');
 
     const { data } = matter(fileContents) as unknown as { data: IMatterData };
 
@@ -54,7 +54,7 @@ export const getSortedProjectsData = async () => {
 
 export const getProjectData = async (id: string) => {
   const fullPath = path.join(projectsDirectory, `${id}.md`);
-  const fileContents = await readFile(fullPath, "utf-8");
+  const fileContents = await readFile(fullPath, 'utf-8');
 
   const { data, content } = matter(fileContents) as unknown as {
     data: IMatterData;
