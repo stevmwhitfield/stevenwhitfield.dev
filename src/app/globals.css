@@ -1,28 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@catppuccin/palette/style';
 
 @layer base {
-  body[data-theme="light"] {
-    --clr-background: 219 219 219; /* #e3e3e3 */
-    --clr-text: 36 36 36; /* #242424 */
-    --clr-text-alt: 240 240 240; /* #f0f0f0 */
-    --clr-primary: 67 163 58; /* #43a33a */
-    --clr-border: 202 202 202; /* #d6d6d6 */
+  /* Catppuccin - Latte */
+  body[data-theme='light'] {
+    --clr-background: var(--ctp-latte-base-raw);
+    --clr-text: var(--ctp-latte-text-raw);
+    --clr-subtext: var(--ctp-latte-subtext0-raw);
+    --clr-primary: var(--ctp-latte-mauve-raw);
+    --clr-accent: var(--ctp-latte-blue-raw);
+    --clr-border: var(--ctp-latte-lavender-raw);
   }
 
-  body[data-theme="dark"] {
-    --clr-background: 36 36 36; /* #242424 */
-    --clr-text: 219 219 219; /* #e3e3e3 */
-    --clr-text-alt: 18 18 18; /* #121212 */
-    --clr-primary: 143 255 133; /* #8fff85 */
-    --clr-border: 62 62 62; /* #3e3e3e */
+  /* Catppuccin - Macchiato */
+  body[data-theme='dark'] {
+    --clr-background: var(--ctp-macchiato-base-raw);
+    --clr-text: var(--ctp-macchiato-text-raw);
+    --clr-subtext: var(--ctp-macchiato-subtext0-raw);
+    --clr-primary: var(--ctp-macchiato-teal-raw);
+    --clr-accent: var(--ctp-macchiato-blue-raw);
+    --clr-border: var(--ctp-macchiato-lavender-raw);
   }
 }
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -31,45 +35,39 @@ body {
 body {
   background: rgb(var(--clr-background));
   color: rgb(var(--clr-text));
-  font-size: 1.125rem;
+}
+
+a {
+  color: rgb(var(--clr-accent));
 }
 
 a:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
+  opacity: 0.6;
 }
 
 .markdown-content h2 {
-  /* font-weight: 500; */
+  padding-top: 3rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
-  /* font-size: 1.5rem;
-    line-height: 2rem; */
-  margin-top: 2.25rem;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.markdown-content p {
-  margin-bottom: 1.125rem;
+.markdown-content p,
+ul {
+  padding-top: 1.5rem;
 }
 
 .markdown-content ul {
-  display: flex;
-  flex-flow: row wrap;
-  row-gap: 0.5rem;
-  column-gap: 2rem;
+  list-style-type: disc;
+  padding-left: 2.25rem;
 }
 
 .markdown-content li {
-  /* margin-bottom: 0.25rem; */
+  margin: 0.75rem 0;
 }
 
-.markdown-content a:hover {
+.markdown-content a {
   color: rgb(var(--clr-primary));
-}
-
-@media (min-width: 80rem) {
-  body {
-    font-size: 1.25rem;
-  }
 }

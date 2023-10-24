@@ -1,13 +1,12 @@
-import PageHeader from "@/components/basic/PageHeader";
-import { getAllProjectIds, getProjectData } from "@/lib/projects";
+import Link from 'next/link';
 
-import Link from "next/link";
+import { getAllProjectIds, getProjectData } from '@/lib/projects';
 
 export const generateStaticParams = async () => {
   const projectPaths = await getAllProjectIds();
 
   return projectPaths.map((project) => ({
-    id: project.params.id
+    id: project.params.id,
   }));
 };
 
@@ -17,43 +16,35 @@ const getData = async (id: string) => {
 };
 
 const Project = async ({ params }: { params: { id: string } }) => {
-  const { id, title, repo, live, date, contentHtml } = await getData(params.id);
+  const { title, repo, live, date, contentHtml } = await getData(params.id);
 
-  const parsedDate = new Date(date + "T12:00:00-04:00").toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric"
+  const parsedDate = new Date(date + 'T12:00:00-04:00').toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
   });
 
   return (
     <>
-      <section id={id} className="container mx-auto flex flex-col items-start mt-12 mb-6">
-        <PageHeader text={title} />
-        <p>
+      <header>
+        <h1 className='text-4xl font-bold text-primary'>{title}</h1>
+        <p className='text-lg text-subtext'>
           Last updated: <time dateTime={date}>{parsedDate}</time>
         </p>
-      </section>
-      <div className="flex gap-x-4 mb-6">
-        {repo ? (
-          <Link href={repo} target="_blank" rel="noreferrer" className="hover:text-primary">
-            View Code
-          </Link>
-        ) : (
-          ""
-        )}
+      </header>
+      <section className='pt-6 flex gap-x-4'>
+        {repo ? <Link href={repo}>Source code</Link> : ''}
         {live ? (
           <>
-            <div>&middot;</div>
-            <Link href={live} target="_blank" rel="noreferrer" className="hover:text-primary">
-              See Live
-            </Link>
+            <div>·</div>
+            <Link href={live}>Live demo</Link>
           </>
         ) : (
-          ""
+          ''
         )}
-      </div>
+      </section>
       <section>
-        <div className="markdown-content" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div className='markdown-content' dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </section>
     </>
   );
