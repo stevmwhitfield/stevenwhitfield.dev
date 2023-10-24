@@ -1,12 +1,11 @@
 # stevenwhitfield.dev
 
-A single-page website to showcase a little about myself.
+My personal website.
 
-## Technologies used
+## Technologies
 
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [NPM](https://www.npmjs.com/)
+Built on [Next.js](https://nextjs.org/) and [TypeScript](https://www.typescriptlang.org/). 
+
+Styled with [Tailwind CSS](https://tailwindcss.com/) using the [Catppuccin](https://github.com/catppuccin/catppuccin) theme.
+
+Linted with [ESLint](https://eslint.org/) and formatted with [Prettier](https://prettier.io/).
