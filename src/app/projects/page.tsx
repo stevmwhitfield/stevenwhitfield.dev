@@ -21,9 +21,16 @@ const Projects = async () => {
         <h1 className='text-4xl font-bold text-primary'>Projects</h1>
         <p className='pt-6'>View a specific project to learn more about it.</p>
       </header>
-      <section className='pt-12 flex flex-col gap-12'>
-        {projects.map(({ id, title, tags }) => (
-          <ProjectLink key={id} title={title} tags={tags} href={`/projects/${id}`} />
+      <section className='pt-12 grid grid-cols-auto-fill gap-6'>
+        {projects.map(({ id, title, tags, date, description }) => (
+          <ProjectLink
+            key={id}
+            title={title}
+            tags={tags}
+            year={date.split('-')[0]}
+            description={description}
+            href={`/projects/${id}`}
+          />
         ))}
       </section>
     </>

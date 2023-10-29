@@ -31,11 +31,7 @@ const About = () => {
             CompTIA
           </li>
           <li className='my-3'>
-            Managing a booth for{' '}
-            <Link href={'/projects/jump-racer.md'} className='text-primary'>
-              Jump Racer
-            </Link>{' '}
-            at{' '}
+            Managing a booth for <Link href={'/projects/jump-racer'}>Jump Racer</Link> at{' '}
             <Link
               href={
                 'https://floridapoly.edu/student-affairs/student-development/campus-traditions/game-expo.php'

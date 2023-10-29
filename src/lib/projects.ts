@@ -13,6 +13,7 @@ interface IMatterData {
   repo?: string | undefined;
   live?: string | undefined;
   date: string;
+  description: string;
 }
 
 const projectsDirectory = path.join(process.cwd(), 'projects');

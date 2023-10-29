@@ -12,6 +12,7 @@
     --clr-primary: var(--ctp-latte-teal-raw);
     --clr-accent: var(--ctp-latte-blue-raw);
     --clr-border: var(--ctp-latte-subtext0-raw);
+    --clr-card: var(--ctp-latte-mantle-raw);
   }
 
   /* Catppuccin - Macchiato */
@@ -22,6 +23,7 @@
     --clr-primary: var(--ctp-macchiato-teal-raw);
     --clr-accent: var(--ctp-macchiato-blue-raw);
     --clr-border: var(--ctp-macchiato-lavender-raw);
+    --clr-card: var(--ctp-macchiato-mantle-raw);
   }
 }
 

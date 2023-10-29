@@ -4,17 +4,21 @@ interface ProjectLink {
   title: string;
   tags: string[];
   href?: string;
+  year: string;
+  description: string;
 }
 
-const ProjectLink = ({ title, tags, href }: ProjectLink) => {
+const ProjectLink = ({ title, href, year, description }: ProjectLink) => {
   return (
-    <Link href={`${href}`} className='flex flex-col text-start hover:no-underline'>
-      <p className='text-3xl font-semibold text-text'>{title}</p>
-      <div className='flex gap-x-2 pt-6 pb-1'>
-        <p className='text-subtext overflow-hidden whitespace-nowrap overflow-ellipsis'>
-          {tags.join(' / ')}
-        </p>
+    <Link
+      href={`${href}`}
+      className='block px-6 py-6 bg-card border-2 border-transparent hover:border-border hover:opacity-100 hover:no-underline'
+    >
+      <div className='flex justify-between items-baseline mb-3'>
+        <p className='text-2xl text-text font-semibold'>{title}</p>
+        <p className='text-lg text-accent opacity-60'>{year}</p>
       </div>
+      <p className='text-base text-text'>{description}</p>
     </Link>
   );
 };

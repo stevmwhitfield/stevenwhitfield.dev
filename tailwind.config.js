@@ -18,6 +18,10 @@ module.exports = {
         primary: 'rgb(var(--clr-primary), <alpha-value>)',
         accent: 'rgb(var(--clr-accent), <alpha-value>)',
         border: 'rgb(var(--clr-border), <alpha-value>)',
+        card: 'rgb(var(--clr-card), <alpha-value>)',
+      },
+      gridTemplateColumns: {
+        'auto-fill': 'repeat(auto-fill, minmax(300px, 1fr))',
       },
     },
   },
