@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Steven Whitfield - Software Engineer',
-  description: 'Software engineer. Open to work opportunities.',
+  description: 'Software engineer.',
 };
 
 const Home = () => {
@@ -26,8 +26,9 @@ const Home = () => {
       <section className='pt-12'>
         <h3 className='text-3xl font-semibold'>Hello and welcome!</h3>
         <p className='pt-6'>
-          {"I'm"} a recent C.S. grad from Florida Polytechnic University with a passion for the web
-          and tinkering with modern technologies. {"I'm"} currently open to work. Feel free to{' '}
+          {"I'm"} an associate software engineer with a a passion for the web and tinkering with
+          modern technologies. I graduated from Florida Polytechnic University in May 2023 with a
+          degree in computer science. Feel free to{' '}
           <Link href={'/projects'}>browse my projects</Link> or reach out to{' '}
           <Link href={'/contact'}>say hi</Link>.
         </p>

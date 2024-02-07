@@ -69,15 +69,13 @@ const About = () => {
           <Skill icon={'devicon-npm-original-wordmark colored'} text={'NPM'} />
           <Skill icon={'devicon-eslint-plain colored'} text={'ESLint'} />
         </div>
-        <p className='pt-6'>
-          {"I'm"} currently learning more about ASP.NET Core, Jest, and user auth.
-        </p>
+        <p className='pt-6'>{"I'm"} currently learning more about fullstack development.</p>
       </section>
       <section className='pt-12'>
         <h2 className='text-3xl font-semibold'>Miscellaneous</h2>
         <p className='pt-6'>
           I listen to almost any genre of music. My top picks at the moment are rock, pop punk, and
-          EDM.
+          k-pop.
         </p>
         <p className='pt-6'>
           I enjoy playing both casual and competitive games such as Bloons, Elden Ring, and League
