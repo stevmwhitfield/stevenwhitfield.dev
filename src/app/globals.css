@@ -17,6 +17,9 @@
     @apply box-border;
   }
   body {
-    @apply font-sans bg-ctp-base text-ctp-text w-full max-w-prose px-6 sm:px-0;
+    @apply font-sans text-base bg-ctp-base text-ctp-text w-full max-w-[650px] mx-auto px-6 sm:px-0;
+  }
+  a {
+    @apply text-ctp-blue;
   }
 }
