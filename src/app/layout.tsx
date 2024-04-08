@@ -41,11 +41,14 @@ export default function RootLayout({
             </div>
           </header>
           <main>{children}</main>
-          <footer className='pb-6'>
+          <footer className='pb-6 mt-12'>
             <div className='h-px bg-ctp-surface0 mb-6' />
             <div className='flex flex-col sm:flex-row sm:justify-between'>
               <p className='mb-2 sm:mb-0'>© 2024 Steven Whitfield</p>
-              <Link href='#' className='flex items-center'>
+              <Link
+                href='https://github.com/stevmwhitfield/stevenwhitfield.dev'
+                className='flex items-center'
+              >
                 <Github className='mr-2' />
                 Source code
               </Link>
