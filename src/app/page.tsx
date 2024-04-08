@@ -2,28 +2,80 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const languages = [
-  { label: 'HTML5', icon: 'devicon-html5-plain' },
-  { label: 'CSS3', icon: 'devicon-css3-plain' },
-  { label: 'JavaScript', icon: 'devicon-javascript-plain' },
-  { label: 'TypeScript', icon: 'devicon-typescript-plain' },
-  { label: 'Java', icon: 'devicon-java-plain' },
-  { label: 'C#', icon: 'devicon-csharp-plain' },
-  { label: 'MySQL', icon: 'devicon-mysql-plain' }
+  {
+    label: 'HTML5',
+    icon: 'devicon-html5-plain',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/HTML'
+  },
+  {
+    label: 'CSS3',
+    icon: 'devicon-css3-plain',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+  },
+  {
+    label: 'JavaScript',
+    icon: 'devicon-javascript-plain',
+    href: 'https://developer.mozilla.org/en-US/docs/Web/javascript'
+  },
+  {
+    label: 'TypeScript',
+    icon: 'devicon-typescript-plain',
+    href: 'https://www.typescriptlang.org/'
+  },
+  { label: 'Java', icon: 'devicon-java-plain', href: 'https://www.java.com/' },
+  {
+    label: 'C#',
+    icon: 'devicon-csharp-plain',
+    href: 'https://learn.microsoft.com/en-us/dotnet/csharp/'
+  },
+  {
+    label: 'MySQL',
+    icon: 'devicon-mysql-plain',
+    href: 'https://www.mysql.com/'
+  }
 ];
 
 const frameworks = [
-  { label: 'React', icon: 'devicon-react-plain' },
-  { label: 'Tailwind CSS', icon: 'devicon-tailwindcss-plain' },
-  { label: 'Next.js', icon: 'devicon-nextjs-plain' },
-  { label: 'Spring', icon: 'devicon-spring-plain' }
+  { label: 'React', icon: 'devicon-react-plain', href: 'https://react.dev/' },
+  {
+    label: 'Tailwind CSS',
+    icon: 'devicon-tailwindcss-plain',
+    href: 'https://tailwindcss.com/'
+  },
+  {
+    label: 'Next.js',
+    icon: 'devicon-nextjs-plain',
+    href: 'https://nextjs.org/'
+  },
+  {
+    label: 'Spring',
+    icon: 'devicon-spring-plain',
+    href: 'https://spring.io/projects/spring-framework/'
+  }
 ];
 
 const others = [
-  { label: 'Git', icon: 'devicon-git-plain' },
-  { label: 'GitHub', icon: 'devicon-github-plain' },
-  { label: 'VS Code', icon: 'devicon-vscode-plain' },
-  { label: 'Eclipse', icon: 'devicon-eclipse-plain' },
-  { label: 'Figma', icon: 'devicon-figma-plain' }
+  { label: 'Git', icon: 'devicon-git-plain', href: 'https://git-scm.com/' },
+  {
+    label: 'GitHub',
+    icon: 'devicon-github-plain',
+    href: 'https://github.com/'
+  },
+  {
+    label: 'VS Code',
+    icon: 'devicon-vscode-plain',
+    href: 'https://code.visualstudio.com/'
+  },
+  {
+    label: 'Eclipse',
+    icon: 'devicon-eclipse-plain',
+    href: 'https://eclipseide.org/'
+  },
+  {
+    label: 'Figma',
+    icon: 'devicon-figma-plain',
+    href: 'https://www.figma.com/'
+  }
 ];
 
 export default function Home() {
@@ -59,8 +111,13 @@ export default function Home() {
         <div className='mb-4'>
           {languages.map((lang) => (
             <Button key={lang.label} size={'iconLabel'} asChild>
-              <Link href='' className='flex flex-col space-y-1 items-center'>
-                <i className={`${lang.icon} text-xl text-ctp-subtext1`} />
+              <Link
+                href={lang.href}
+                className='flex flex-col space-y-1 items-center'
+              >
+                <i
+                  className={`${lang.icon} colored text-xl text-ctp-subtext1`}
+                />
                 <span className='text-xs text-ctp-subtext0'>{lang.label}</span>
               </Link>
             </Button>
@@ -70,8 +127,13 @@ export default function Home() {
         <div className='mb-4'>
           {frameworks.map((framework) => (
             <Button key={framework.label} size={'iconLabel'} asChild>
-              <Link href='' className='flex flex-col space-y-1 items-center'>
-                <i className={`${framework.icon} text-xl text-ctp-subtext1`} />
+              <Link
+                href={framework.href}
+                className='flex flex-col space-y-1 items-center'
+              >
+                <i
+                  className={`${framework.icon} colored text-xl text-ctp-subtext1`}
+                />
                 <span className='text-xs text-ctp-subtext0'>
                   {framework.label}
                 </span>
@@ -83,8 +145,13 @@ export default function Home() {
         <div className='mb-4'>
           {others.map((other) => (
             <Button key={other.label} size={'iconLabel'} asChild>
-              <Link href='' className='flex flex-col space-y-1 items-center'>
-                <i className={`${other.icon} text-xl text-ctp-subtext1`} />
+              <Link
+                href={other.href}
+                className='flex flex-col space-y-1 items-center'
+              >
+                <i
+                  className={`${other.icon} colored text-xl text-ctp-subtext1`}
+                />
                 <span className='text-xs text-ctp-subtext0'>{other.label}</span>
               </Link>
             </Button>
