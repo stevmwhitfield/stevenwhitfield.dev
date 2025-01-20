@@ -1,0 +1,27 @@
+---
+import { cva } from 'class-variance-authority';
+import { cn } from '../lib/utils';
+
+const buttonVariants = cva(
+    'inline-flex items-center justify-center rounded-sm text-ctp-text hover:bg-ctp-surface0 [&>i]:text-xl [&>i]:leading-none',
+    {
+        variants: {
+            size: {
+                default: 'h-12 px-3',
+                icon: 'size-12 p-3',
+                iconLabel: 'p-3',
+            },
+        },
+        defaultVariants: {
+            size: 'default',
+        },
+    }
+);
+
+const { classes, size, asLink = false, ...props } = Astro.props;
+const Comp = asLink ? 'a' : 'button';
+---
+
+<Comp class={cn(buttonVariants({ size, className: classes }))} {...props}>
+    <slot />
+</Comp>
